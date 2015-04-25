@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Party Pages - The homepages of UK Political Party Websites</title>
+  <style type="text/css">
+    html {
+      min-height: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      background: #F8F8F8;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      margin: 10px;
+      text-align: center;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: block;
+      -webkit-transition: all 2s;
+      transition: all 2s;
+    }
+    a.page {
+      position: relative;
+      border: 1px solid #CCC;
+      margin: 5px;
+      display: inline-block;
+      /*float: left;*/
+      width: 300px;
+      overflow: hidden;
+      height: 350px;
+      background: #CCC;
+    }
+    a.page:hover img {
+      top: -60px;
+    }
+    footer {
+      padding: 10px;
+      margin-top: 10px;
+      background: #FFF;
+      border-top: 1px solid #EEE;
+      text-align: center;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>UK Political Party Homepages</h1>
+  <div id="pages">
+  <a class="page" target="_blank" title="Conservative Party" href="conservatives.png"><img src="conservatives-fs8.png" /></a>
+  <a class="page" target="_blank" title="Liberal Democrats" href="libdems.png"><img src="libdems-fs8.png" /></a>
+  <a class="page" target="_blank" title="Labour Party" href="labour.png"><img src="labour-fs8.png" /></a>
+  <a class="page" target="_blank" title="United Kingdom Independence Party (UKIP)" href="ukip.png"><img src="ukip-fs8.png" /></a>
+  <a class="page" target="_blank" title="Green Party" href="greens.png"><img src="greens-fs8.png" /></a>
+  <a class="page" target="_blank" title="Scottish National Party (SNP)" href="snp.png"><img src="snp-fs8.png" /></a>
+  <a class="page" target="_blank" title="Plaid Cymru (in English)" href="plaidcymru.png"><img src="plaidcymru-fs8.png" /></a>
+  <a class="page" target="_blank" title="Pirate Party" href="pirateparty.png"><img src="pirateparty-fs8.png" /></a>
+  <a class="page" target="_blank" title="Respect Party" href="respect.png"><img src="respect-fs8.png" /></a>
+  <a class="page" target="_blank" title="British National Party (BNP)" href="bnp.png"><img src="bnp-fs8.png" /></a>
+  </div>
+
+<footer>
+  <p>The order is randomised. This service is not supported by, and does not endorse any particular party. <a href="https://github.com/johnrees/partypages">Github Source</a> <a href="https://twitter.com/john_rees/status/572801934895292416">More Info</a></p>
+</footer>
+
+  <script type="text/javascript">
+  // Randomise order so as not to show bias
+  var ul = document.getElementById('pages');
+  for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+  }
+  </script>
+</body>
+</html>
